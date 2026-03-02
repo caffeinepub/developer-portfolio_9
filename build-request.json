@@ -1,0 +1,160 @@
+{
+  "kind": "build_request",
+  "title": "Minimal Developer Portfolio Website",
+  "projectName": "Dev Portfolio",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a Hero section with a name placeholder (e.g., 'Your Name'), a short tagline ('Developer'), and a brief one-liner intro. Layout should be centered with generous white space, no background imagery or gradients.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Hero/intro: Name placeholder, short tagline like \"Developer\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section displays a name placeholder and 'Developer' tagline",
+        "Section is vertically and horizontally centered with ample white space",
+        "No background images, gradients, or heavy decoration"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create an About section with a short placeholder bio paragraph describing the developer's background and interests.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "About: Brief bio section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section is visible with a readable placeholder bio paragraph",
+        "Section uses clean typography with adequate line height and spacing"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a Skills section displaying a clean list or minimal grid of placeholder tech skills: HTML, CSS, JavaScript, React, Node.js, and at least two others. Each skill should be a simple tag or pill with no heavy decoration.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Skills: Clean list or simple grid of tech skills (HTML, CSS, JS, React, Node.js, etc. as placeholders)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Skills section shows at least 7 placeholder skills",
+        "Skills are displayed as a grid or inline list of minimal tags/pills",
+        "No icons, gradients, or decorative elements on skill items"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a Projects section with 2–3 placeholder project cards. Each card must include a project title, a short description, a GitHub link, and a Live link. Cards should have a subtle border or shadow and a hover effect (e.g., slight border color change or lift).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Projects: 2-3 project cards with title, short description, and links (GitHub/Live)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Three project cards are displayed",
+        "Each card has a title, description, GitHub link, and Live link",
+        "Cards have a subtle hover effect only (no animation on load)",
+        "Cards are responsive and stack on mobile"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a Contact section with a placeholder email address and links to GitHub and LinkedIn. Layout should be simple — no form required, just clean inline or stacked links.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Contact: Simple contact section with email and social links (GitHub, LinkedIn)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact section displays a placeholder email address",
+        "GitHub and LinkedIn links are present and functional (href placeholders are acceptable)",
+        "No contact form is included"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a sticky top navigation bar with smooth-scroll anchor links to each section (Hero, About, Skills, Projects, Contact) and a dark mode toggle button. Navigation should collapse gracefully on mobile (hamburger or minimal approach).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Dark mode optional toggle or default light with dark text",
+          "Mobile responsive"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation bar is sticky and contains links to all five sections",
+        "Clicking a nav link smooth-scrolls to the corresponding section",
+        "Dark mode toggle switches between light and dark themes",
+        "Navigation is usable on mobile (collapses or adapts)"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Apply a clean, minimal visual design system across the entire portfolio: default light theme with near-black text (#111 or similar), white or off-white backgrounds, one subtle accent color (e.g., a muted teal or slate), clean sans-serif typography (Inter or system-ui font stack), generous white space between sections, and subtle hover effects only. Dark mode should invert the palette cleanly. No heavy animations, gradients, or decorative flourishes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Clean, minimal design with lots of white space, simple typography, and a monochromatic or very limited color palette (e.g., black and white with one subtle accent color)",
+          "Clean sans-serif font (like Inter or system font)",
+          "Subtle hover effects only",
+          "No heavy animations or gradients",
+          "Make it feel like a thoughtful, professional developer's personal site — not flashy, just clean and well-crafted"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Font is Inter or a system-ui sans-serif stack",
+        "Color palette uses near-black, white/off-white, and exactly one subtle accent color",
+        "No CSS animations play on page load",
+        "Hover effects are present but subtle (color shift or underline only)",
+        "Dark mode applies an inverted palette without introducing new colors",
+        "All sections have consistent generous vertical spacing"
+      ]
+    }
+  ],
+  "constraints": [
+    "No contact form — contact section is display-only (email + social links)",
+    "No heavy animations or gradient backgrounds",
+    "Color palette must remain monochromatic with at most one accent color",
+    "All content is placeholder/static — no backend data persistence required"
+  ],
+  "nonGoals": [
+    "Backend storage or CMS for portfolio content",
+    "Authentication or user accounts",
+    "Blog or article section",
+    "Contact form with email sending functionality",
+    "Multi-page routing — single-page scroll layout only"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Minimal Developer Portfolio Website",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create Hero section with name placeholder, 'Developer' tagline, and centered layout",
+      "acceptanceCriteria": [
+        "Hero section displays a name placeholder and 'Developer' tagline",
+        "Section is vertically and horizontally centered with ample white space",
+        "No background images, gradients, or heavy decoration"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create Hero component with centered layout displaying name placeholder ('Your Name'), 'Developer' tagline, and a brief one-liner intro. Use clean typography with generous vertical and horizontal padding. No background imagery or gradients."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Hero component at the top of the main application layout, above other sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create About section with placeholder bio paragraph",
+      "acceptanceCriteria": [
+        "About section is visible with a readable placeholder bio paragraph",
+        "Section uses clean typography with adequate line height and spacing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "create",
+          "description": "Create About component with id='about' for anchor navigation. Display a short placeholder bio paragraph describing developer background and interests. Apply clean typography with adequate line-height (1.6 or higher) and comfortable reading width (max-width)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render About component after Hero section in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create Skills section with minimal grid of placeholder tech skills",
+      "acceptanceCriteria": [
+        "Skills section shows at least 7 placeholder skills",
+        "Skills are displayed as a grid or inline list of minimal tags/pills",
+        "No icons, gradients, or decorative elements on skill items"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Skills.tsx",
+          "operation": "create",
+          "description": "Create Skills component with id='skills' for anchor navigation. Display at least 7 placeholder tech skills (HTML, CSS, JavaScript, React, Node.js, TypeScript, Git) as a responsive grid or inline flex list. Each skill should be a simple pill/tag with border, padding, and no icons or gradients. Use minimal styling only."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Skills component after About section in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create Projects section with 2-3 placeholder project cards including title, description, and links",
+      "acceptanceCriteria": [
+        "Three project cards are displayed",
+        "Each card has a title, description, GitHub link, and Live link",
+        "Cards have a subtle hover effect only (no animation on load)",
+        "Cards are responsive and stack on mobile"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Projects.tsx",
+          "operation": "create",
+          "description": "Create Projects component with id='projects' for anchor navigation. Display 3 placeholder project cards in a responsive grid (stacks on mobile). Each card includes project title, short description, GitHub link, and Live link. Apply subtle border or shadow, and add a subtle hover effect (slight border color change or transform). No animations on load."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Projects component after Skills section in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create Contact section with placeholder email and social links (GitHub, LinkedIn)",
+      "acceptanceCriteria": [
+        "Contact section displays a placeholder email address",
+        "GitHub and LinkedIn links are present and functional (href placeholders are acceptable)",
+        "No contact form is included"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "create",
+          "description": "Create Contact component with id='contact' for anchor navigation. Display placeholder email address (e.g., 'your.email@example.com') and social links to GitHub and LinkedIn. Use simple inline or stacked link layout with adequate spacing. No contact form — display-only."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Contact component after Projects section in the main layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Implement sticky navigation bar with smooth-scroll anchor links and dark mode toggle",
+      "acceptanceCriteria": [
+        "Navigation bar is sticky and contains links to all five sections",
+        "Clicking a nav link smooth-scrolls to the corresponding section",
+        "Dark mode toggle switches between light and dark themes",
+        "Navigation is usable on mobile (collapses or adapts)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create Navigation component with sticky positioning. Include smooth-scroll anchor links to Hero, About, Skills, Projects, and Contact sections (using href='#about', '#skills', etc.). Add dark mode toggle button that switches theme. Implement mobile-responsive behavior (hamburger menu or horizontal scroll). Ensure navigation remains accessible and usable on all screen sizes."
+        },
+        {
+          "path": "frontend/src/hooks/useDarkMode.ts",
+          "operation": "create",
+          "description": "Create useDarkMode hook to manage dark mode state using localStorage persistence. Toggle 'dark' class on document root element. Return current dark mode state and toggle function."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render Navigation component at the top of the application, before all other sections. Ensure smooth scrolling is enabled for anchor links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Apply clean, minimal visual design system with light/dark theme support",
+      "acceptanceCriteria": [
+        "Font is Inter or a system-ui sans-serif stack",
+        "Color palette uses near-black, white/off-white, and exactly one subtle accent color",
+        "No CSS animations play on page load",
+        "Hover effects are present but subtle (color shift or underline only)",
+        "Dark mode applies an inverted palette without introducing new colors",
+        "All sections have consistent generous vertical spacing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define global design system with clean, minimal styling. Set font to Inter or system-ui sans-serif stack. Define CSS custom properties for light theme: near-black text (#111 or similar), white/off-white backgrounds, and one subtle accent color (muted teal or slate). Define dark mode variants using .dark class selector with inverted palette. Apply smooth scroll behavior. Ensure generous vertical spacing between sections. No CSS animations or gradients. Hover effects must be subtle only (color transitions)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Configure Tailwind with Inter font family, custom color palette matching design system (near-black, white/off-white, one accent color), and dark mode class strategy. Extend spacing scale for generous section padding. Disable default animations to prevent load animations."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-03-02T15:00:18.684Z",
+  "summary": "The diff implements all seven requirements from the build request. All sections (Hero, About, Skills, Projects, Contact) are present with correct content, the sticky navigation with smooth-scroll and dark mode toggle is implemented, and the design system uses Inter font, monochromatic palette with one accent color, and subtle hover effects. One minor concern: the desktop navigation links array in Navigation.tsx omits 'Hero' as a named link (though a logo/name link to #hero exists). Additionally, InternetIdentityProvider and useActor hook are included as infrastructure even though authentication/backend features were explicitly listed as non-goals.",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Navigation bar contains links to all five sections (Hero, About, Skills, Projects, Contact)",
+      "reason": "The navLinks array in Navigation.tsx only includes About, Skills, Projects, and Contact. There is no explicit named 'Hero' nav link; only the logo ('YN.') scrolls to #hero, which may not satisfy the AC requiring a named link to the Hero section.",
+      "evidence": [
+        "frontend/src/components/Navigation.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "InternetIdentityProvider and Internet Identity authentication infrastructure included in the app",
+      "reason": "The build request explicitly lists 'Authentication or user accounts' as a non-goal. main.tsx wraps App in InternetIdentityProvider and useInternetIdentity.ts plus useActor.ts implement a full authentication flow that was not requested.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "A Footer component with caffeine.ai attribution link was added",
+      "reason": "No footer component was requested in the build request. It is an unrequested feature added beyond the specified sections.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "description": "'Available for work' status badge in the Hero section",
+      "reason": "The Hero section requirements specify only a name placeholder, 'Developer' tagline, and a brief one-liner intro. An 'Available for work' badge was not requested.",
+      "evidence": [
+        "frontend/src/components/Hero.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.82,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/About.tsx",
+    "frontend/src/components/Contact.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/Projects.tsx",
+    "frontend/src/components/Skills.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useDarkMode.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

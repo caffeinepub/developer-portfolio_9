@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report mapping portfolio section features (Hero, About, Skills, Projects, Contact) to their implementing source files, components, and test IDs with confidence ratings.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence descriptions of each frontend source file, serving as a reference summary for the project's frontend structure.",
+  "frontend/index.css": "Base Tailwind CSS file defining OKLCH color tokens as CSS custom properties for both light and dark themes, plus global border and background defaults.",
+  "frontend/index.html": "Minimal HTML entry point that mounts the React app into a root div and loads the main TypeScript module.",
+  "frontend/src/App.tsx": "Root React component that composes Navigation, Hero, About, Skills, Projects, Contact, and Footer into a single-page scroll layout.",
+  "frontend/src/components/About.tsx": "About section with a two-column layout featuring an avatar placeholder (initials) and three paragraphs of placeholder developer bio text.",
+  "frontend/src/components/Contact.tsx": "Contact section displaying a placeholder email link and GitHub/LinkedIn social links using Lucide and react-icons in a two-column layout.",
+  "frontend/src/components/Footer.tsx": "Footer component showing copyright year, owner name, and a caffeine.ai attribution link with UTM tracking parameters.",
+  "frontend/src/components/Hero.tsx": "Full-viewport hero section with a name placeholder, 'Developer' tagline, one-liner intro, and CTA buttons that smooth-scroll to Projects and Contact sections.",
+  "frontend/src/components/Navigation.tsx": "Sticky navigation bar with smooth-scroll anchor links, a dark mode toggle using a custom hook, and a mobile hamburger menu dropdown.",
+  "frontend/src/components/Projects.tsx": "Projects section rendering three placeholder project cards, each with a title, description, tech tags, and GitHub/live icon links with hover effects.",
+  "frontend/src/components/Skills.tsx": "Skills section displaying 12 placeholder tech skills as minimal pill/tag spans in a wrapping flex layout.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches an ICP backend actor (authenticated or anonymous) using React Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useDarkMode.ts": "React hook that manages dark mode state by persisting the preference to localStorage and toggling a 'dark' class on the document root.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an InternetIdentityProvider and useInternetIdentity hook for managing ICP Internet Identity authentication, including login, logout, and identity state.",
+  "frontend/src/index.css": "Global stylesheet that imports Inter font, sets up Tailwind base/components/utilities, and defines OKLCH-based CSS custom properties for light and dark themes along with reusable utility classes.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with QueryClientProvider and InternetIdentityProvider wrappers around the root App component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration that maps OKLCH CSS variables to semantic color tokens, extends the theme with custom fonts, border radii, shadows, and accordion animations, and registers typography, container-queries, and animate plugins.",
+  "project_state.json": "Tracks the current project state schema version, feature list, and architectural notes for a minimal developer portfolio with Hero, About, Skills, Projects, Contact sections, sticky nav, and dark mode."
+}
